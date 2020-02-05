@@ -1,7 +1,13 @@
-export const joinController = (req, res) => res.send("join")
-export const loginController = (req, res) => res.send("login")
-export const logoutController = (req, res) => res.send("logout")
-export const users = (req,res) => res.send("Users");
-export const userDetail = (req,res) => res.send("User Detail");
-export const editProfile= (req,res) => res.send("editProfile");
-export const changePassword = (req,res) => res.send("changePassword");
+export const joinController = (req, res) =>
+  res.render("join", { pageTitle: "Join" });
+export const loginController = (req, res) =>
+  res.render("login", { pageTitle: "Login" });
+export const logoutController = (req, res) =>
+  res.render("logout", { pageTitle: "Logout" });
+export const users = (req, res) => res.send("Users", { pageTitle: "Users" });
+export const userDetail = (req, res) =>
+  res.render("User Detail", { pageTitle: "User Detail" });
+export const editProfile = (req, res) =>
+  res.render("editProfile", { pageTitle: "Edit Profile" });
+export const changePassword = (req, res) =>
+  res.render("changePassword", { pageTitle: "Change Password" });
