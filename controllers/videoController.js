@@ -1,11 +1,12 @@
+import { videosData } from "../db";
+
 export const videoHomeController = (req, res) =>
-  res.render("home", { pageTitle: "Home" });
+  res.render("home", { pageTitle: "Home", videosData });
 export const videoSearchController = (req, res) => {
   const {
     query: { term: searchingBy }
   } = req;
-  console.log("req : ", req.query);
-  res.render("search", { pageTitle: "Search", searchingBy });
+  res.render("search", { pageTitle: "Search", searchingBy, videosData });
 };
 export const videos = (req, res) => res.send("Videos", { pageTitle: "Videos" });
 export const upload = (req, res) => res.send("Upload", { pageTitle: "Upload" });
