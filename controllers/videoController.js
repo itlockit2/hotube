@@ -1,5 +1,3 @@
-import { videosData } from "../db";
-
 export const videoHomeController = (req, res) =>
   res.render("home", { pageTitle: "Home", videosData });
 export const videoSearchController = (req, res) => {
